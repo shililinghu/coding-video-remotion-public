@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>为什么所有人都做对了，最后结果却可能是错的？</title>
+<style>
+  html, body { margin: 0; background: #1b1916; color: #eee; font-family: "Microsoft YaHei", sans-serif; }
+  body.capture { background: #000; overflow: hidden; }
+  #stage { display: block; margin: 0 auto; }
+  body:not(.capture) #stage { width: min(100vw, calc((100vh - 64px) * 16 / 9)); height: auto; cursor: pointer; }
+  #bar { display: flex; gap: 12px; align-items: center; justify-content: center; padding: 10px; }
+  body.capture #bar { display: none; }
+  #bar button { font: inherit; padding: 6px 16px; border-radius: 6px; border: 1px solid #888; background: #333; color: #eee; cursor: pointer; }
+  #seek { width: 50vw; }
+</style>
+</head>
+<body>
+<canvas id="stage" width="1280" height="720" aria-label="视频画面预览"></canvas>
+<div id="bar">
+  <button id="play" type="button">播放 / 暂停</button>
+  <input id="seek" type="range" min="0" max="1" step="0.01" value="0" aria-label="进度">
+  <span id="clock">0.0s</span>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

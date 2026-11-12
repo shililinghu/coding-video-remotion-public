@@ -1,0 +1,19 @@
+{
+  "name": "all-correct-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "为什么所有人都做对了，最后结果却可能是错的？— a code-generated explainer video",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\"",
+    "serve": "node scripts/serve.mjs 8765",
+    "timeline": "node scripts/dump_timeline.mjs",
+    "still": "node scripts/still.mjs",
+    "audio": "python scripts/build_audio.py --all",
+    "mix": "python scripts/mix.py",
+    "render": "node scripts/render.mjs --workers 2"
+  },
+  "dependencies": {
+    "puppeteer-core": "25.12.0"
+  }
+}
